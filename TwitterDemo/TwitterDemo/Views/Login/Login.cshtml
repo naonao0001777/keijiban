@@ -1,0 +1,29 @@
+﻿@model TwitterDemo.Models.User
+
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Login</h2>
+<form action="Login" method="post">
+    <div>
+        <div>
+            <label>
+                ログインID：
+                @Html.TextBoxFor(m => m.UserId)
+            </label>
+        </div>
+        <div>
+            <label>
+                パスワード：
+                @Html.TextBoxFor(m => m.Password)
+
+            </label>
+        </div>
+    </div>
+    <div>
+        <input type="submit" value="ログイン" id="loginbtn" name="loginbtn" />
+    </div>
+</form>
+
