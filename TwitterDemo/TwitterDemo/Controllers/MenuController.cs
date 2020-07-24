@@ -13,9 +13,9 @@ namespace TwitterDemo.Controllers
         /// メニュー画面リダイレクト用
         /// </summary>
         /// <returns></returns>
-        public ActionResult Menu()
+        public ActionResult Menu(User user)
         {
-            return View();
+            return View(user);
         }
 
         /// <summary>
@@ -23,8 +23,16 @@ namespace TwitterDemo.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpPost]
-        public ActionResult Menu(User user)
+        public ActionResult Menu(string param)
         {
+            if (param == "accountbtn")
+            {
+                RedirectToAction("Account","Account");
+            }
+            else if (param == "logoutbtn")
+            {
+                RedirectToAction("Login","Login");
+            }
 
             return View();
         }

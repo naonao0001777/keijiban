@@ -7,5 +7,27 @@
 
 <h2>Menu</h2>
 <div>
+    <label>
+        アカウント名：@Html.Display(Model.UserName)
+    </label>
     
+    <label>
+        アカウントタイプ：@Html.Display(Model.AccountType.ToString())
+    </label>
+    <label>
+
+    </label>
+</div>
+<div>
+    <form action="Menu" method="post">
+        <div>
+            <input type="submit" name="accountbtn" id="accountbtn" value="アカウント設定" />
+        </div>
+        <div>
+            <input type="submit" name="logoutbtn" id="logoutbtn" value="ログアウト" />
+        </div>
+        <div>
+            <input type="button" name="backbtn" id="backbtn" value="戻る" onclick=""/>
+        </div>
+    </form>
 </div>

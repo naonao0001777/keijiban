@@ -21,5 +21,13 @@ namespace TwitterDemo.Models
         public int AccountType { get; set; }
 
         public DateTime UpdateTime { get; set; }
+
+        public void Converter()
+        {
+            if (AccountType == 1)
+            {
+
+            }
+        }
     }
 }
