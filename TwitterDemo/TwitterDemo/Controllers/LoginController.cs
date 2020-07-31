@@ -44,7 +44,7 @@ namespace TwitterDemo.Controllers
             {
                 Session["userInfo"] = user;
 
-                return RedirectToAction("Menu", "Menu",getUser);
+                return RedirectToAction("Menu", "Menu");
             }
         }
     }

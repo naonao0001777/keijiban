@@ -16,11 +16,11 @@ namespace TwitterDemo.Models
 
         public string Password { get; set; }
 
-        public string UserName { get; set; }
+        public string AccountName { get; set; }
 
         public int AccountType { get; set; }
 
-        public DateTime UpdateTime { get; set; }
+        public DateTime UpdateDate { get; set; }
 
         public void Converter()
         {
