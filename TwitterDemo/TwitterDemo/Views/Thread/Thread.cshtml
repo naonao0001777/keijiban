@@ -1,4 +1,4 @@
-﻿@model TwitterDemo.Models.User
+﻿@model IEnumerable<TwitterDemo.Models.Article>
 
 @{
     ViewBag.Title = "Thread";
@@ -7,3 +7,7 @@
 
 <h2>Thread</h2>
 
+@foreach (var article in Model)
+{
+    <label>@Html.DisplayFor(m=>article)</label>
+}

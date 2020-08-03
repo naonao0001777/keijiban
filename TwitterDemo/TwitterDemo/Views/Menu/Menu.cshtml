@@ -1,34 +1,33 @@
 ﻿@model TwitterDemo.Models.User
 
 @{
-    ViewBag.Title = "Menu";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+	ViewBag.Title = "Menu";
+	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Menu</h2>
 <div>
-    <label>
-        アカウント名：@Html.DisplayFor(m=>m.AccountName)
-    </label>
-    
-    <label>
-        アカウントタイプ：@Html.DisplayFor(m => m.AccountType)
-    </label>
-    <label>
-		@ViewBag.a
-    </label>
+	<label>
+		アカウント名：@Html.DisplayFor(m => m.AccountName)
+	</label>
+
+	<label>
+		アカウントタイプ：@Html.DisplayFor(m => m.AccountType)
+	</label>
 </div>
 <div>
-	@using (Html.BeginForm("Menu","Menu",null,FormMethod.Post))
+	@using (Html.BeginForm("Menu", "Menu", null, FormMethod.Post))
 	{
 		@Html.AntiForgeryToken();
 		<div>
 			<input type="submit" name="accountbtn" id="accountbtn" value="アカウント設定" />
+			
+			<input type="submit" name="article" id="article" value="掲示板" />
 		</div>
+		<br>
 		<div>
 			<input type="submit" name="logoutbtn" id="logoutbtn" value="ログアウト" />
-		</div>
-		<div>
+
 			<input type="button" name="backbtn" id="backbtn" value="戻る" onclick="" />
 		</div>
 	}

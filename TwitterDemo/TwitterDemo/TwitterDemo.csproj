@@ -162,6 +162,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Article.cs" />
     <Compile Include="Models\CommonDbContext.cs" />
     <Compile Include="Models\Threads.cs" />
     <Compile Include="Models\User.cs" />

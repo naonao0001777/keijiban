@@ -25,7 +25,7 @@ namespace TwitterDemo.Controllers
         [HttpPost]
         public ActionResult Account(User user)
         {
-            return View();
+            return View(user);
         }
     }
 }

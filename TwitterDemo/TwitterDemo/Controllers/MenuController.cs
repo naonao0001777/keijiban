@@ -17,9 +17,7 @@ namespace TwitterDemo.Controllers
         /// <returns></returns>
         public ActionResult Menu(User user)
         {
-            ConnectionMethod conm = new ConnectionMethod();
-            var a = conm.GetThread();
-            ViewBag.a = a;
+
             return View(user);
         }
 
@@ -29,15 +27,19 @@ namespace TwitterDemo.Controllers
         /// <returns></returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Menu(string accountbtn,string logoutbtn)
+        public ActionResult Menu(string accountbtn, string logoutbtn, string article)
         {
-            if (accountbtn !=null)
+            if (accountbtn != null)
             {
-                return RedirectToAction("Account","Account");
+                return RedirectToAction("Account", "Account");
             }
             else if (logoutbtn != null)
             {
-                return RedirectToAction("Login","Login");
+                return RedirectToAction("Login", "Login");
+            }
+            else if (article != null)
+            {
+                return RedirectToAction("Thread","Thread");
             }
             return View();
         }

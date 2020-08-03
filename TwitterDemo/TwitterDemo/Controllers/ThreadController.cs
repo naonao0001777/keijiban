@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using TwitterDemo.Dao;
 using TwitterDemo.Models;
 
 namespace TwitterDemo.Controllers
@@ -15,7 +16,10 @@ namespace TwitterDemo.Controllers
         /// <returns></returns>
         public ActionResult Thread()
         {
-            return View();
+            ConnectionMethod method = new ConnectionMethod();
+            var articles = method.GetArticles();
+
+            return View(articles);
         }
 
         /// <summary>
