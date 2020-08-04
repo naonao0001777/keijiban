@@ -5,6 +5,7 @@ using System.Web;
 using System.Diagnostics;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using System.Security.Cryptography.X509Certificates;
 
 namespace TwitterDemo.Models
 {
@@ -24,10 +25,7 @@ namespace TwitterDemo.Models
 
         public void Converter()
         {
-            if (AccountType == 1)
-            {
-
-            }
+            
         }
     }
 }

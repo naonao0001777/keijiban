@@ -28,8 +28,14 @@ namespace TwitterDemo.Controllers
         /// <param name="user"></param>
         /// <returns></returns>
         [HttpPost]
-        public ActionResult Thread(User user)
+        public ActionResult Thread(string contents)
         {
+            User user = new User();
+            user = (User)Session["userInfo"];
+
+            ConnectionMethod method = new ConnectionMethod();
+            method.AddThread(user,contents);
+
             return View();
         }
     }

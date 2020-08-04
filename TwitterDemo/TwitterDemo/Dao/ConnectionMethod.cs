@@ -72,9 +72,20 @@ namespace TwitterDemo.Dao
             return articleList;
         }
 
-        public void AddThread()
+        public void AddThread(User user, string contents)
         {
+            Guid guid = Guid.NewGuid();
 
+            _ctx.Thread.Add(new Threads
+            {
+                ThreadId = guid.ToString(),
+                UserId = user.UserId,
+                Contents = contents,
+                UpdateDateTime = DateTime.Now.ToString(),
+                DeleteKey = "0"
+            });
+
+            _ctx.SaveChanges();
         }
     }
 }

@@ -1,13 +1,31 @@
 ﻿@model IEnumerable<TwitterDemo.Models.Article>
 
 @{
-    ViewBag.Title = "Thread";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+	ViewBag.Title = "Thread";
+	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Thread</h2>
 
-@foreach (var article in Model)
-{
-    <label>@Html.DisplayFor(m=>article)</label>
-}
+<form action="Thread" method="post">
+	<div>
+		<div>
+			<textarea name="contents" rows="4" cols="40">投稿</textarea>
+		</div>
+		<div>
+			<input type="submit" name="contents" id="contents" value="投稿" />
+		</div>
+	</div>
+</form>
+<div>
+	<table>
+		<tbody>
+			@foreach (var article in Model)
+			{
+				<tr>
+					@Html.DisplayFor(m => article)
+				</tr>
+			}
+		</tbody>
+	</table>
+</div>
