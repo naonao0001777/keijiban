@@ -1,1 +1,3 @@
-"# fresher-s-learning" 
+# 掲示板
+
+# MVCモデル
